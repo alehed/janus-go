@@ -370,7 +370,7 @@ func (handle *Handle) send(msg map[string]interface{}, transaction chan interfac
 	handle.session.send(msg, transaction)
 }
 
-// send sync request
+// Request sends sync request
 func (handle *Handle) Request(body interface{}) (*SuccessMsg, error) {
 	req, ch := newRequest("message")
 	if body != nil {
